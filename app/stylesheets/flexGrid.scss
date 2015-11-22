@@ -1,0 +1,85 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.col {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@for $i from 1 through 12 {
+  $dnm: 12/$i;
+  $size: #{100/$dnm}%;
+  .col-#{$i} {
+    -ms-flex-preferred-size: $size;
+    -webkit-flex-basis: $size;
+    flex-basis: $size;
+    max-width: $size;
+  }
+}
+
+
+// @media only screen and (min-width: 48em) {
+//   .container {
+//     width: 46rem;
+//   }
+// }
+//
+// @media only screen and (min-width: 62em) {
+//   .container {
+//     width: 61rem;
+//   }
+// }
+//
+// @media only screen and (min-width: 75em) {
+//   .container {
+//     width: 71rem;
+//   }
+// }
