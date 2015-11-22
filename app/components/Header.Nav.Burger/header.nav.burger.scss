@@ -1,0 +1,14 @@
+.header .nav .burger {
+  width: 22px;
+
+  .bun {
+    width: 100%;
+    height: 2px;
+    background: #222;
+    margin-bottom: 4px;
+  }
+
+  @media only screen and (min-width: 530px) {
+    display: none;
+  }
+}

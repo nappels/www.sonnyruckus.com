@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from './Header.Nav';
+import Nav from '../Header.Nav/Header.Nav';
 
 class Header extends React.Component {
   render() {

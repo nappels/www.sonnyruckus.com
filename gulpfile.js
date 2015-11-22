@@ -59,6 +59,12 @@ gulp.task('build', function() {
   bundle()
 });
 
+gulp.task('html', function() {
+  gulp.src('./app/index.html')
+    .pipe(concat('index.html'))
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('serve', function(done) {
   gulp.src('./dist/')
     .pipe(server({
@@ -86,7 +92,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./dist/css/'));
 });
 
-gulp.task('default', ['build', 'serve', 'sass', 'watch']);
+gulp.task('default', ['build', 'html', 'serve', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./app/**/*.scss', ['sass']);

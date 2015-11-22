@@ -1,0 +1,21 @@
+.header .nav {
+  display: inline-block;
+
+  ul {
+    display: none;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+      margin: 0 20px;
+    }
+  }
+
+  @media only screen and (min-width: 530px) {
+    margin: 0 auto;
+
+    ul {
+      display: block;
+    }
+  }
+}
