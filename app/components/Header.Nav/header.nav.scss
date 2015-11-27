@@ -2,6 +2,10 @@
 
 .header .nav {
   width: 100%;
+  position: absolute;
+  height: 0;
+  transform-origin: top;
+  transition: height 1.5s;
 
   ul {
     visibility: hidden;
@@ -16,6 +20,9 @@
     }
   }
   &.open {
+    background: #fff;
+    height: 100%;
+
     ul {
       visibility: visible;
 
@@ -36,6 +43,7 @@
     display: inline-block;
     width: auto;
     margin: 0 auto;
+    position: static;
 
     ul {
       visibility: visible;

@@ -1,7 +1,11 @@
 .page-wrapper .page-home {
   align-items: stretch;
-  
+
   .main-img {
-    background: blue;
+    background: url('/img/img-main.jpg') no-repeat;
+    background-size: contain;
+    height: 500px;
+    max-width: 500px;
+    margin: 40px auto;
   }
 }
