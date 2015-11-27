@@ -11,6 +11,8 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var normalizeCSS = require('node-normalize-scss');
+var imagemin = require('gulp-imagemin');
+var clean = require('gulp-clean');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -92,7 +94,18 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./dist/css/'));
 });
 
-gulp.task('default', ['build', 'html', 'serve', 'sass', 'watch']);
+gulp.task('imagemin', function() {
+  gulp.src('./app/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('clean', function() {
+  gulp.src('./dist/*')
+    .pipe(clean());
+});
+
+gulp.task('default', ['clean', 'build', 'html', 'imagemin', 'serve', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./app/**/*.scss', ['sass']);
