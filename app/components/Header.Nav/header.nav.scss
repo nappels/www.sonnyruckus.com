@@ -4,8 +4,9 @@
   width: 100%;
   position: absolute;
   height: 0;
-  transform-origin: top;
-  transition: height 1.5s;
+  @include prefix(transform-origin, top);
+  @include prefix(transition, 'height 1.5s');
+  @include prefix(user-select, none);
 
   ul {
     visibility: hidden;
