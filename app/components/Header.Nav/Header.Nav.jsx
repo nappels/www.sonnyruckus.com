@@ -23,11 +23,11 @@ class Nav extends React.Component {
       <nav className={navClass}>
         <Burger isOpen={this.state.isOpen} toggleOpen={this.toggleOpen.bind(this)} />
         <ul>
-          <li>Home</li>
-          <li>Music</li>
-          <li>Tour</li>
-          <li>Bio</li>
-          <li>Contact</li>
+          <li><a data-scroll href="#Home">Home</a></li>
+          <li><a data-scroll href="#Music">Music</a></li>
+          <li><a data-scroll href="#Shows">Shows</a></li>
+          <li><a data-scroll href="#Bio">Bio</a></li>
+          <li><a data-scroll href="#Contact">Contact</a></li>
         </ul>
       </nav>
     );

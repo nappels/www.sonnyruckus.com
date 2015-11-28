@@ -25,9 +25,12 @@
     "gulp-watch": "^4.3.5",
     "node-normalize-scss": "^1.0.3",
     "node-notifier": "^4.3.1",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.0"
+  },
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "smooth-scroll": "cferdinandi/smooth-scroll"
   }
 }

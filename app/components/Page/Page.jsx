@@ -1,4 +1,5 @@
 import React from 'react';
+import smoothScroll from 'smooth-scroll';
 
 import Header from '../Header/Header';
 import PageHome from '../Page.Home/Page.Home';
@@ -8,6 +9,10 @@ import PageBio from '../Page.Bio/Page.Bio';
 import PageContact from '../Page.Contact/Page.Contact';
 
 class Page extends React.Component {
+  componentDidMount() {
+    smoothScroll.init()
+  }
+
   render() {
     return (
       <div className="page-wrapper">

@@ -3,7 +3,7 @@ import React from 'react';
 class PageMusic extends React.Component {
   render() {
     return (
-      <section className="row page-music">
+      <section id="Music" className="row page-music">
         <h2>Music</h2>
       </section>
     );
