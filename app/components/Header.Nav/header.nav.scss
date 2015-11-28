@@ -3,6 +3,7 @@
 .header .nav {
   width: 100%;
   position: absolute;
+  left: 0;
   height: 0;
   @include prefix(transform-origin, top);
   @include prefix(transition, 'height 1.5s');
