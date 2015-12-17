@@ -13,6 +13,7 @@ var uglify = require('gulp-uglify');
 var normalizeCSS = require('node-normalize-scss');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
+var gulpCopy = require('gulp-copy');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -100,12 +101,18 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('./dist/img'));
 });
 
+gulp.task('fonts', function() {
+  gulp.src('./app/fonts/*')
+    .pipe(gulpCopy('./dist/', {prefix: 1}))
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('clean', function() {
   gulp.src('./dist/*')
     .pipe(clean());
 });
 
-gulp.task('default', ['clean', 'build', 'html', 'imagemin', 'serve', 'sass', 'watch']);
+gulp.task('default', ['build', 'html', 'fonts', 'imagemin', 'serve', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./app/**/*.scss', ['sass']);
