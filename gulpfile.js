@@ -14,6 +14,10 @@ var normalizeCSS = require('node-normalize-scss');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
 var gulpCopy = require('gulp-copy');
+var gulpif = require('gulp-if');
+
+var isDeployTask = false;
+var isDefaultTask = false;
 
 var notify = function(error) {
   var message = 'In: ';
@@ -60,7 +64,16 @@ bundler.on('update', bundle)
 
 gulp.task('build', function() {
   bundle()
+  .on('end', function() {
+    uglifyJs();
+  });
 });
+
+function uglifyJs() {
+  gulp.src('./dist/js/main.js')
+    .pipe(gulpif(isDeployTask, uglify()))
+    .pipe(gulp.dest('./dist/js/'));
+};
 
 gulp.task('html', function() {
   gulp.src('./app/index.html')
@@ -112,7 +125,18 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-gulp.task('default', ['build', 'html', 'fonts', 'imagemin', 'serve', 'sass', 'watch']);
+gulp.task('registerDeploy', function() {
+  isDeployTask = true;
+  isDefaultTask = false;
+});
+
+gulp.task('registerDefault', function() {
+  isDeployTask = false;
+  isDefaultTask = true;
+});
+
+gulp.task('default', ['registerDefault', 'build', 'html', 'fonts', 'imagemin', 'serve', 'sass', 'watch']);
+gulp.task('deploy', ['registerDeploy', 'build', 'html', 'fonts', 'imagemin', 'serve', 'sass']);
 
 gulp.task('watch', function () {
   gulp.watch('./app/**/*.scss', ['sass']);
