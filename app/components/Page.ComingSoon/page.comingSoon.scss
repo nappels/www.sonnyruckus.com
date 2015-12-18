@@ -68,9 +68,13 @@
       top: 160px;
     }
 
-    img {
+    .img-main {
       width: 500px;
+      height: 160px;
+      background-size: 500px 160px;
+      background-image: url(../img/sr_idea1.png);
       max-width: 100%;
+      margin: 0 auto;
     }
 
     h2 {
