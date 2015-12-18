@@ -7,7 +7,7 @@ class PageComingSoon extends React.Component {
       <div className="border-glitch"></div>
         <div className="col">
           <div className="center">
-            <img src="../img/sr_idea1.png" alt="Sonny Ruckus" />
+            <img src="img/sr_idea1.png" alt="Sonny Ruckus" />
             <h2>...coming soon</h2>
             <iframe
               width="100%"
