@@ -1,7 +1,8 @@
 @import '../../stylesheets/utils';
 
 .page-wrapper .page-shows {
-  background: #e4e4e4;
+  background: $red;
+  color:#fff;
 
   .tour-date-wrapper {
     margin-top: 60px;
