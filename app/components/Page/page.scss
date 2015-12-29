@@ -1,7 +1,11 @@
 .page-wrapper {
-  height: 100%;
-
   [class*="page-"] {
-    height: 100%;
+    padding: 60px 20px;
+    text-align: center;
+
+    > .col {
+      max-width: 960px;
+      margin: 0 auto;
+    }
   }
 }

@@ -5,7 +5,7 @@ class PageHome extends React.Component {
     return (
       <section id="Home" className="row page-home">
         <div className="col">
-          <div className="main-img"></div>
+          <img src="/img/sr_main.jpg" className="main-img" />
         </div>
       </section>
     );

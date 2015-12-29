@@ -2,6 +2,7 @@ import React from 'react';
 import smoothScroll from 'smooth-scroll';
 
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import PageHome from '../Page.Home/Page.Home';
 import PageMusic from '../Page.Music/Page.Music';
 import PageShows from '../Page.Shows/Page.Shows';
@@ -15,23 +16,17 @@ class Page extends React.Component {
   }
 
   render() {
-    if (true) {
-        return (
-            <PageComingSoon />
-        );
-    }
-    else {
-        return (
-          <div className="page-wrapper">
-            <Header />
-            <PageHome />
-            <PageMusic />
-            <PageShows />
-            <PageBio />
-            <PageContact />
-          </div>
-        );
-    }
+    return (
+      <div className="page-wrapper">
+        <Header />
+        <PageHome />
+        <PageMusic />
+        <PageShows />
+        <PageBio />
+        <PageContact />
+        <Footer />
+      </div>
+    );
   }
 };
 

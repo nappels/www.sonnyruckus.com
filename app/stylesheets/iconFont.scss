@@ -1,0 +1,28 @@
+@font-face {
+	font-family: "Iconfont";
+	src: url("../fonts/icon-font.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {
+	font-family: Iconfont;
+  font-size: 34px;
+  font-style: normal;
+}
+
+.icon-email:before {
+	content: "\e000";
+}
+.icon-facebook:before {
+	content: "\e001";
+}
+.icon-instagram:before {
+	content: "\e002";
+}
+.icon-soundcloud:before {
+	content: "\e003";
+}
+.icon-twitter:before {
+	content: "\e004";
+}

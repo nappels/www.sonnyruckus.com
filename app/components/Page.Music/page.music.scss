@@ -1,3 +1,5 @@
-.page-wrapper .page-music {
+@import '../../stylesheets/utils';
 
+.page-wrapper .page-music {
+  border-top: 8px solid $yellow;
 }
