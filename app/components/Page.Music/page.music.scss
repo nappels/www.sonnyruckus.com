@@ -2,4 +2,9 @@
 
 .page-wrapper .page-music {
   border-top: 8px solid $red;
+
+  iframe {
+    border: none;
+    margin-bottom: 30px;
+  }
 }

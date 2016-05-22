@@ -3,4 +3,14 @@
     text-align: left;
     line-height: 1.5;
   }
+
+  .instrumentation {
+    text-align: center;
+    font-size: 1.2em;
+    opacity: .8;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
 }
