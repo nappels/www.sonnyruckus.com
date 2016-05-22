@@ -55,13 +55,14 @@
   max-width: 100%;
 }
 
-@for $i from 1 through 12 {
-  $dnm: 12/$i;
-  $size: #{100/$dnm}%;
-  .col-#{$i} {
-    -ms-flex-preferred-size: $size;
-    -webkit-flex-basis: $size;
-    flex-basis: $size;
-    max-width: $size;
-  }
-}
+// @for $i from 1 through 12 {
+//   $dnm: 12/$i;
+//   $size: #{100/$dnm}%;
+//
+//   .col-#{$i} {
+//     -ms-flex-preferred-size: $size;
+//     -webkit-flex-basis: $size;
+//     flex-basis: $size;
+//     max-width: $size;
+//   }
+// }
