@@ -120,6 +120,12 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('cname', function() {
+  gulp.src('./CNAME')
+    .pipe(gulpCopy('./dist/'))
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('clean', function() {
   gulp.src('./dist/*')
     .pipe(clean());
@@ -136,7 +142,7 @@ gulp.task('registerDefault', function() {
 });
 
 gulp.task('default', ['registerDefault', 'build', 'html', 'fonts', 'imagemin', 'serve', 'sass', 'watch']);
-gulp.task('deploy', ['registerDeploy', 'build', 'html', 'fonts', 'imagemin', 'serve', 'sass']);
+gulp.task('deploy', ['registerDeploy', 'build', 'html', 'fonts', 'imagemin', 'serve', 'sass', 'cname']);
 
 gulp.task('watch', function () {
   gulp.watch('./app/**/*.scss', ['sass']);
