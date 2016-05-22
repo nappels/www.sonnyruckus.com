@@ -694,6 +694,13 @@ h2 {
   text-align: left;
   line-height: 1.5; }
 
+.page-wrapper .page-bio .instrumentation {
+  text-align: center;
+  font-size: 1.2em;
+  opacity: .8; }
+  .page-wrapper .page-bio .instrumentation li {
+    margin-bottom: 8px; }
+
 .page-coming-soon {
   border-top: 20px solid #cb9326;
   margin: 0 -2em;
@@ -775,16 +782,6 @@ h2 {
     .page-wrapper .page-contact .social-icons [class*=icon-]:hover {
       color: #cb9326; }
 
-.page-wrapper .page-music {
-  border-top: 8px solid #a13305; }
-
-.page-wrapper .page-shows {
-  background: #a13305;
-  color: #fff; }
-  .page-wrapper .page-shows .tour-date-wrapper {
-    margin-top: 60px;
-    width: 100%; }
-
 .page-wrapper .page-home {
   min-height: 100%;
   text-align: center;
@@ -807,3 +804,16 @@ h2 {
     max-width: 100%;
     width: 600px;
     margin: 40px auto; }
+
+.page-wrapper .page-shows {
+  background: #a13305;
+  color: #fff; }
+  .page-wrapper .page-shows .tour-date-wrapper {
+    margin-top: 60px;
+    width: 100%; }
+
+.page-wrapper .page-music {
+  border-top: 8px solid #a13305; }
+  .page-wrapper .page-music iframe {
+    border: none;
+    margin-bottom: 30px; }
